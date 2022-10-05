@@ -16,6 +16,8 @@
 		383E56C828D82FC900197652 /* allUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E56C728D82FC900197652 /* allUTests.swift */; };
 		383E56D228D82FC900197652 /* allUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E56D128D82FC900197652 /* allUUITests.swift */; };
 		383E56D428D82FC900197652 /* allUUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E56D328D82FC900197652 /* allUUITestsLaunchTests.swift */; };
+		383E56E328D8314B00197652 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 383E56E228D8314B00197652 /* MapboxMaps */; };
+		383E56E528D835CE00197652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383E56E428D835CE00197652 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		383E56CD28D82FC900197652 /* allUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = allUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		383E56D128D82FC900197652 /* allUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allUUITests.swift; sourceTree = "<group>"; };
 		383E56D328D82FC900197652 /* allUUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allUUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		383E56E028D8302E00197652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		383E56E428D835CE00197652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383E56E328D8314B00197652 /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +103,10 @@
 		383E56B028D82FC600197652 /* allU */ = {
 			isa = PBXGroup;
 			children = (
+				383E56E028D8302E00197652 /* Info.plist */,
 				383E56B128D82FC600197652 /* allUApp.swift */,
 				383E56B328D82FC600197652 /* ContentView.swift */,
+				383E56E428D835CE00197652 /* ViewController.swift */,
 				383E56B528D82FC800197652 /* Assets.xcassets */,
 				383E56BA28D82FC800197652 /* Persistence.swift */,
 				383E56BC28D82FC800197652 /* allU.xcdatamodeld */,
@@ -149,6 +156,9 @@
 			dependencies = (
 			);
 			name = allU;
+			packageProductDependencies = (
+				383E56E228D8314B00197652 /* MapboxMaps */,
+			);
 			productName = allU;
 			productReference = 383E56AE28D82FC600197652 /* allU.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 383E56A528D82FC600197652;
+			packageReferences = (
+				383E56E128D8314B00197652 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 383E56AF28D82FC600197652 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383E56E528D835CE00197652 /* ViewController.swift in Sources */,
 				383E56BB28D82FC800197652 /* Persistence.swift in Sources */,
 				383E56B428D82FC600197652 /* ContentView.swift in Sources */,
 				383E56B228D82FC600197652 /* allUApp.swift in Sources */,
@@ -427,6 +441,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"allU/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = allU/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +470,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"allU/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = allU/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -585,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		383E56E128D8314B00197652 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		383E56E228D8314B00197652 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 383E56E128D8314B00197652 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		383E56BC28D82FC800197652 /* allU.xcdatamodeld */ = {
