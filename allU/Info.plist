@@ -2,13 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>allU.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<key>MBXAccessToken</key>
+	<string>sk.eyJ1IjoiZGpiYXVlciIsImEiOiJjbDg4YWZjNWoxMTM2M25tY282bG1uejBwIn0.hpNYu54sSOse9YmXzp9DGw</string>
 </dict>
 </plist>
